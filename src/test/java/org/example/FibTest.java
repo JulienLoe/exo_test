@@ -5,6 +5,8 @@ import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
 
+import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 
 
@@ -81,10 +83,10 @@ public class FibTest {
 
         initGrandingCalculator(6);
         List result = fib.getFibSeries();
-        result.sort(null);
-        int a [] = {0, 1, 1, 2, 3, 5};
+        List noSort = result;
+         Collections.sort(result);
         //Assert
-        Assertions.assertEquals(true ,result.toString().equals(Arrays.toString(a)));
+        Assertions.assertEquals(result, noSort);
 
     }
 

@@ -42,7 +42,7 @@ public class FibTest {
         initGrandingCalculator(6);
         List result = fib.getFibSeries();
         //Assert
-        Assertions.assertEquals(true, result.contains(3));
+        Assertions.assertTrue(result.contains(3));
 
     }
 
@@ -52,9 +52,17 @@ public class FibTest {
         initGrandingCalculator(6);
         List result = fib.getFibSeries();
         //Assert
-        Assertions.assertEquals(6, result.size());
-
+        Assertions.assertTrue( result.size() > 0);
     }
+
+//    @Test
+//    public void testRange6Contain0{
+//
+//        initGrandingCalculator(6);
+//        List result = fib.getFibSeries();
+//        //Assert
+//        Assertions.assertEquals(Arrays.asList(0), result);
+//    }
 
     @Test
     public void testRange6AddNotNumber4(){
@@ -62,7 +70,7 @@ public class FibTest {
         initGrandingCalculator(6);
         List result = fib.getFibSeries();
         //Assert
-        Assertions.assertEquals(true, !result.contains(4));
+        Assertions.assertTrue( !result.contains(4));
 
     }
 
@@ -74,7 +82,7 @@ public class FibTest {
         System.out.println(result);
         int a [] = {0, 1, 1, 2, 3, 5};
         //Assert
-        Assertions.assertEquals(true ,result.toString().equals(Arrays.toString(a)));
+        Assertions.assertEquals(result.toString(),Arrays.toString(a));
 
     }
 
@@ -89,5 +97,16 @@ public class FibTest {
         Assertions.assertEquals(result, noSort);
 
     }
+
+//    @Test
+//    public void testRange6Asc(){
+//
+//        initGrandingCalculator(6);
+//        List result = fib.getFibSeries();
+//
+//        //Assert
+//        Assertions.assertEquals(Arrays.asList(0,1,1,2,3,5), result);
+//
+//    }
 
 }

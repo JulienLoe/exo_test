@@ -21,7 +21,7 @@ public class GradingCalculatorTest {
         gradingCalculator.setAttendancePercentage(90);
         double result = gradingCalculator.getGrade();
         //Assert
-        Assertions.assertEquals("A", result);
+        Assertions.assertEquals('A', result);
     }
 
     @Test

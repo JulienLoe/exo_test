@@ -55,4 +55,19 @@ public class CityTest {
         //Assert
         Assertions.assertTrue(result.isEmpty());
     }
+
+    @Test
+    void testCityNoFoundExceptionTest2Char() {
+        //Arrange
+        city = new City();
+
+        //Act
+        city.setListCity(Arrays.asList("Paris", "Valence"));
+
+        //Assert
+        Assertions.assertThrowsExactly(RuntimeException.class, () -> {
+            city.searchCity("t");
+        });
+    }
+
 }

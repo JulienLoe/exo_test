@@ -6,9 +6,9 @@ import java.util.List;
 import java.util.Stack;
 
 public class City {
-
+private  List<String> listCity;
     public List<String> searchCity(String search){
-        List<String> listCity = new ArrayList<>();
+        listCity = new ArrayList<>();
         listCity.add("Paris");
         listCity.add("Budapest");
         listCity.add("Skopje");
@@ -48,5 +48,11 @@ public class City {
         System.out.println(city.size());
 
         return city;
+
+
+    }
+
+    public void setListCity(List<String> listCity) {
+        this.listCity = listCity;
     }
 }
